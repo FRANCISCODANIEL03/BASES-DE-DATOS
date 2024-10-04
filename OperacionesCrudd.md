@@ -106,7 +106,43 @@ UPDATE Usuarios SET password="12345xyz" WHERE id_usuario=52;
 UPDATE Usuarios SET email="user323@gmail.com", password="12324352" WHERE id_usuario=52;
 ```
 
-##### Ejercicio
+### Ejercicio
 intenta actualizar registros con valores que violen las restricciones
+```sql
+UPDATE Usuarios SET password="1ueidkfhryti8493" WHERE id_usuario=52;
+UPDATE Usuarios SET password="1ue" WHERE id_usuario=52;
+UPDATE Usuarios SET email="user52@gmail.com" WHERE id_usuario=53;
+UPDATE Usuarios SET email="user52gmail.com" WHERE id_usuario=52;
+```
+* ## DELTE
+La operacion *ELIMINAR* se usa para borrar registros de la base de dato, esto se realiza con la sentencia: 
 
+`DELETE`
 
+Debemos ser muy cuidadosos con esta operacion, ya que una vez que los datos son eliminados no pueden ser recuperados 
+```sql
+-- Eliminar el usuario por el id
+DELETE FROM Usuarios WHERE id_usuario=52;
+-- Eliminar los usurios con el email especifico 
+DELETE FROM Usuarios WHERE email="user32@gamil.com";
+-- Eliminar todos los registros de la tabla 
+DELETE FROM Usuarios;
+-- Eliminar usuarios cuya contraseña menos de 10 caracteres 
+DELETE FROM Usuarios WHERE LENGTH(password) < 10;
+```
+
+### Ejercicios 
+
+* Eliminar usuarios cuyo  email contenga un o mas 5 
+* Eliminar usuarios que tengan una contraseña que contenga letras mayusculas 
+* Eliminar usuarios con contraseñas que contengan solo numeros 
+* Eliminar usuarios que no tengan el dominio gmail
+```sql
+DELETE FROM Usuarios WHERE email REGEXP '[5]';
+
+DELETE FROM Usuarios WHERE password REGEXP '[A-Z]';
+
+DELETE FROM Usuarios WHERE password REGEXP '^[0-9]';
+
+DELETE FROM Usuarios WHERE email NOT LIKE "%_@gmail._%";
+```
