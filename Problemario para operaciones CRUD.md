@@ -88,6 +88,18 @@ SELECT nombre FROM clientes WHERE LENGTH(direccion) > 10;
 
 5. Incrementa los `id_cliente` de todos los clientes en 10 (esto es solo un ejercicio teórico).
 
+```sql
+-- 1.-
+UPDATE clientes SET telefono="5567890987" WHERE id_cliente=3;
+-- 2.-
+UPDATE clientes SET email="irbin23@gmail.com" WHERE id_cliente=4;
+-- 3.-
+UPDATE clientes SET email="irbin23@gmail.com" WHERE id_cliente=2;
+-- 4.-
+UPDATE clientes SET email="Soyaniquilpan"  WHERE LIKE '%López%';
+-- 5.-
+UPDATE clientes SET id_cliente = id_cliente + 10;
+```
 ## Ejercicios DELETE
 
 1. Elimina un cliente específico con un `id_cliente` dado.
