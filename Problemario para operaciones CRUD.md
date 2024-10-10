@@ -12,7 +12,7 @@ CREATE TABLE clientes (
 );
 ```
 
-## Ejercicios CREATE
+## Ejercicios INSERT
 
 1. Inserta un cliente válido en la tabla.
 
@@ -23,6 +23,26 @@ CREATE TABLE clientes (
 4. Inserta múltiples clientes en una sola consulta.
 
 5. Inserta un cliente con un número de teléfono de menos de 10 caracteres (debería fallar).
+
+```sql
+-- 1.-
+INSERT clientes (id_cliente, nombre, email, telefono, direccion) VALUES (DEFAULT, "emiliano", "emil@gmail.com", "5567890945", "oxtho, calle 32");
+-- 2.-
+INSERT clientes (nombre, email, telefono, direccion) VALUES ("irbin", "irbin23@gamail.com", "5543892356", "Colonia las TABLAS ");
+-- 3.-
+INSERT clientes (nombre, email, telefono, direccion) VALUES ("irbin", "irbin23qgamailcom", "5543892356", "Colonia las TABLAS ");
+-- 4.-
+INSERT clientes (nombre, email, telefono, direccion) 
+    VALUES 
+        ("Irbin Verona", "irbin23@gamail.com", "5543892356", "Colonia las TABLAS"),
+        ("Jordi López", "jordi45@gamail.com", "5534246556", "Villa del carbon"),
+        ("Angel Sanchez", "angel983@gamail.com", "5544633356", "Huertas, Xhixhata"),
+        ("David Colin", "deivid473@gamail.com", "5535667456", "Canalejas"),
+        ("Emiliano Rivera", "miliamo984@gamail.com", "55438934256", "Oxtho, calle 23"),
+        ("Juan López", "juantres45@gamail.com", "554389235690", "Comunidad");
+-- 5.-
+INSERT clientes (nombre, email, telefono, direccion) VALUES ("irbin", "irbin23@gamail.com", "554356", "Colonia las TABLAS ");
+```
 
 ## Ejercicios READ
 
