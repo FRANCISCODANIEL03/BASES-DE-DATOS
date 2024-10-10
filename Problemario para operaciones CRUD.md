@@ -111,3 +111,18 @@ UPDATE clientes SET id_cliente = id_cliente + 10;
 4. Elimina todos los clientes con direcciones que contengan menos de 10 caracteres.
 
 5. Elimina todos los registros de la tabla `clientes` (¡CUIDADO!).
+
+```sql
+-- 1.-
+DELETE FROM clientes WHERE id_cliente = 1;
+-- 2.-
+DELETE FROM clientes WHERE telefono LIKE '555%';
+-- 3.-
+DELETE FROM clientes WHERE nombre LIKE '%Gómez%';
+-- 4.-
+DELETE FROM clientes WHERE LENGTH(direccion) < 10;
+-- 5.-
+DELETE FROM clientes;
+-- Si se quiere restablecer el auto_increment se puede utilizar el siguiente comando
+TRUNCATE TABLE clientes;
+```
