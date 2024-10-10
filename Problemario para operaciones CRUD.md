@@ -44,7 +44,7 @@ INSERT clientes (nombre, email, telefono, direccion)
 INSERT clientes (nombre, email, telefono, direccion) VALUES ("irbin", "irbin23@gamail.com", "554356", "Colonia las TABLAS ");
 ```
 
-## Ejercicios READ
+## Ejercicios SELECT
 
 1. Consulta todos los registros de la tabla `clientes`.
 
@@ -60,6 +60,22 @@ INSERT clientes (nombre, email, telefono, direccion) VALUES ("irbin", "irbin23@g
 
 7. Consulta los clientes con direcciones que contengan más de 10 caracteres.
 
+```sql
+-- 1.-
+SELECT * FROM clientes;
+-- 2.-
+SELECT nombre, email FROM clientes;
+-- 3.-
+SELECT * FROM clientes WHERE telefono LIKE '555%';
+-- 4.-
+SELECT * FROM clientes WHERE nombre LIKE '%López%';
+-- 5.-
+SELECT * FROM clientes ORDER BY nombre ASC;
+-- 6.-
+SELECT email FROM clientes WHERE MOD(id_cliente, 2) = 0;
+-- 7.-
+SELECT nombre FROM clientes WHERE LENGTH(direccion) > 10;
+```
 ## Ejercicios UPDATE
 
 1. Actualiza el número de teléfono de un cliente específico.
