@@ -63,11 +63,26 @@ INSERT INTO productos (nombre, categoria, precio, stock) VALUES
 2. **Registra 3 clientes en la tabla `clientes`.**  
    
    *Instrucción:* Ingresa datos de nombre y correo para cada cliente. Asegúrate de que los correos sean únicos.
-
+```sql
+INSERT INTO clientes (nombre, correo) VALUES
+('Irbin Perez', 'irbin_perez@mail.com'),
+('Ana Gomez', 'ana_gomez@mail.com'),
+('Emiliano Torres', 'emi_torres@mail.com');
+```
 3. **Inserta 2 pedidos hechos por diferentes clientes.**  
    
    *Instrucción:* Cada pedido debe tener al menos 2 productos, especifica la cantidad y el precio unitario de cada uno.
+```sql
+INSERT INTO pedidos (cliente_id, total) VALUES 
+(1, 145.98),  -- Pedido hecho por Irbin Perez
+(2, 314.99);  -- Pedido hecho por Ana Gomez
 
+INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, precio_unitario) VALUES 
+(1, 1, 2, 45.99),  -- Teclado x2
+(1, 5, 1, 25.00),  -- Mouse Inalambrico x1
+(2, 2, 1, 199.99), -- Monitor x1
+(2, 4, 2, 89.99);  -- Memoria RAM x2
+```
 ## Ejercicios READ
 
 1. **Obtén una lista de todos los productos que tienen un stock mayor a 10 unidades.**  
