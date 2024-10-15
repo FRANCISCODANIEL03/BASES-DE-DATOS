@@ -143,3 +143,8 @@ DELETE FROM pedidos WHERE pedido_id = 1;
 3. **Elimina un cliente que ha solicitado la eliminación de su cuenta.**
    
    *Instrucción:* Asegúrate de borrar primero los registros relacionados en la tabla `pedidos` y luego el cliente de la tabla `clientes`.
+```sql
+DELETE FROM pedidos WHERE cliente_id = 3;
+
+DELETE FROM clientes WHERE cliente_id = 3;
+```
