@@ -53,9 +53,12 @@ CREATE TABLE detalle_pedidos (
    
    *Instrucción:* Los productos deben incluir un nombre, categoría, precio y stock inicial.
 ```sql
-INSERT productos VALUES (
-   
-)
+INSERT INTO productos (nombre, categoria, precio, stock) VALUES 
+('Teclado', 'Periféricos', 45.99, 20),
+('Monitor', 'Pantallas', 199.99, 15),
+('Silla Gamer', 'Muebles', 299.50, 5),
+('Memoria RAM 16GB', 'Componentes', 89.99, 10),
+('Mouse Inalambrico', 'Periféricos', 25.00, 30);
 ```
 2. **Registra 3 clientes en la tabla `clientes`.**  
    
@@ -105,7 +108,3 @@ INSERT productos VALUES (
 3. **Elimina un cliente que ha solicitado la eliminación de su cuenta.**
    
    *Instrucción:* Asegúrate de borrar primero los registros relacionados en la tabla `pedidos` y luego el cliente de la tabla `clientes`.
-
-
-
-
