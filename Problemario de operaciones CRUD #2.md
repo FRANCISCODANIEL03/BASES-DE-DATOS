@@ -116,10 +116,14 @@ UPDATE productos SET precio = precio * 1.15 WHERE categoria = 'Perifericos';
 2. **Modifica el correo de uno de los clientes por un nuevo correo electrónico.**
    
    *Instrucción:* Asegúrate de que el nuevo correo sea único.
-
+```sql
+UPDATE clientes SET correo = 'irbin_nuevo@mail.com' WHERE nombre = 'Irbin Perez';
+```
 3. **Corrige el stock de un producto cuyo stock actual es incorrecto.** 
    *Instrucción:* Busca el producto por su `producto_id` y actualiza el campo `stock`.
-
+```sql
+UPDATE productos SET stock = 25 WHERE producto_id = 3;
+```
 ## Ejercicos DELETE
 
 1. **Elimina todos los productos de la tabla `productos` que no tienen stock disponible.** 
