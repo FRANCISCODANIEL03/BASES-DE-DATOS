@@ -101,13 +101,18 @@ WHERE c.nombre = 'Irbin Perez';
 3. **Muestra el total de ventas por cada producto.**  
    
    *Instrucción:* Agrupa por `producto_id` y muestra el `nombre` del producto y la cantidad total vendida en todos los pedidos.
-
+```sql
+SELECT p.producto_id, p.nombre, SUM(dp.cantidad) AS total_vendido FROM productos p JOIN detalle_pedidos dp ON 
+p.producto_id = dp.producto_id GROUP BY p.producto_id, p.nombre;
+```
 ## Ejercicios UPDATE
 
 1. **Actualiza el precio de todos los productos de una categoria aumentando un 15%.**  
    
    *Instrucción:* Usa la columna `categoria` para filtrar los productos.
-
+```sql
+UPDATE productos SET precio = precio * 1.15 WHERE categoria = 'Perifericos';
+```
 2. **Modifica el correo de uno de los clientes por un nuevo correo electrónico.**
    
    *Instrucción:* Asegúrate de que el nuevo correo sea único.
