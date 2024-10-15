@@ -129,11 +129,17 @@ UPDATE productos SET stock = 25 WHERE producto_id = 3;
 1. **Elimina todos los productos de la tabla `productos` que no tienen stock disponible.** 
    
    *Instrucción:* Debes usar la columna `stock` para identificar productos con stock igual a 0.
-
+```sql
+DELETE FROM productos WHERE stock = 0;
+```
 2. **Borra un pedido que fue cancelado por el cliente.** 
    
    *Instrucción:* Elimina el pedido junto con todos los registros relacionados en la tabla `detalle_pedidos`.
+```sql
+DELETE FROM detalle_pedidos WHERE pedido_id = 1;
 
+DELETE FROM pedidos WHERE pedido_id = 1;
+```
 3. **Elimina un cliente que ha solicitado la eliminación de su cuenta.**
    
    *Instrucción:* Asegúrate de borrar primero los registros relacionados en la tabla `pedidos` y luego el cliente de la tabla `clientes`.
