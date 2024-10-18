@@ -218,7 +218,8 @@ SELECT AVG(salary) AS promedio_sueldo FROM empleados;
 Enunciado: Deseamos saber cuántos empleados trabajan en cada departamento.`Para ello,
 necesitas agrupar a los empleados por departamento y contar cuántos hay en cada uno.`
 ```sql
-
+SELECT department, COUNT(department) AS empleados FROM empleados
+GROUP BY department;
 ```
 ### 3. **Encontrar el salario más alto y más bajo**
 ---
