@@ -52,7 +52,3 @@ INSERT usuarios(nickname, password, id_rol) VALUES
  SELECT usuarios.nickname, rol.role_name FROM rol INNER JOIN usuarios ON rol.id_rol =
  usuario
 ```
-
-SELECT department, COUNT(department) AS empleados FROM empleados
-GROUP BY department;
-SELECT DATE(NOW()) AS fecha_actual, nombre, DATEDIFF(NOW(), fecha_ingreso) AS dias_desde_el_ingreso FROM empleados;

@@ -259,7 +259,7 @@ SELECT FORMAT(salary, 2) AS salario_formateado FROM empleados;
 ---
 Enunciado: Queremos saber cuánto tiempo ha pasado (en días) desde que cada empleado ingresó a la empresa hasta la fecha actual.
 ```sql
-
+SELECT DATE(NOW()) AS fecha_actual, nombre, DATEDIFF(NOW(), fecha_ingreso) AS dias_desde_el_ingreso FROM empleados;
 ```
 ### 9. **Contar cuántos empleados tienen su nombre más largo de 10 caracteres**
 ---
