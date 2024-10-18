@@ -225,7 +225,7 @@ necesitas agrupar a los empleados por departamento y contar cuántos hay en cada
 Enunciado: La gerencia quiere conocer el salario más alto y el salario más bajo entre todos los
 empleados
 ```sql
-
+SELECT MAX(salary) AS salario_mas_alto, MIN(salary) AS salario_mas_bajo FROM empleados;
 ```
 ### 4. **Convertir los nombres de los empleados a mayúsculas**
 ---
