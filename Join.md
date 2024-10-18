@@ -49,5 +49,6 @@ INSERT usuarios(nickname, password, id_rol) VALUES
  SELECT usuarios.nickname, rol.role_name FROM rol LEFT JOIN usuarios ON rol.id_rol =
  usuarios.id_rol;
  
-
+ SELECT usuarios.nickname, rol.role_name FROM rol INNER JOIN usuarios ON rol.id_rol =
+ usuario
 ```
