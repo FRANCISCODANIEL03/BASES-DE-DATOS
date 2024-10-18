@@ -43,5 +43,8 @@ INSERT usuarios(nickname, password, id_rol) VALUES
  ("user15", "9385uiirfke", 3),
  ("user16", "478uwkalq", 3);
  
+ SELECT usuarios.nickname, rol.role_name FROM rol RIGHT JOIN usuarios ON rol.id_rol =
+ usuarios.id_rol;
+ 
 
 ```
