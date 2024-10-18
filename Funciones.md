@@ -218,18 +218,14 @@ SELECT AVG(salary) AS promedio_sueldo FROM empleados;
 Enunciado: Deseamos saber cuántos empleados trabajan en cada departamento.`Para ello,
 necesitas agrupar a los empleados por departamento y contar cuántos hay en cada uno.`
 ```sql
-SELECT department, COUNT(department) AS empleados
-FROM empleados
-GROUP BY department;
+
 ```
 ### 3. **Encontrar el salario más alto y más bajo**
 ---
 Enunciado: La gerencia quiere conocer el salario más alto y el salario más bajo entre todos los
 empleados
 ```sql
-SELECT MAX(salary) AS salario_mas_alto FROM empleados;
 
-SELECT MIN(salary) AS salario_mas_bajo FROM empleados;
 ```
 ### 4. **Convertir los nombres de los empleados a mayúsculas**
 ---
@@ -258,15 +254,13 @@ manera clara y legible.
 ```sql
 SELECT FORMAT(salary, 2) AS salario_formateado FROM empleados;
 ```
-### 7. **Obtener la fecha actual y calcular el tiempo desde el ingreso**
+### 8. **Obtener la fecha actual y calcular el tiempo desde el ingreso**
 ---
 Enunciado: Queremos saber cuánto tiempo ha pasado (en días) desde que cada empleado ingresó a la empresa hasta la fecha actual.
 ```sql
-SELECT DATE(NOW()) AS fecha_actual;
 
-SELECT nombre, DATEDIFF(NOW(), fecha_ingreso) AS dias_desde_el_ingreso FROM empleados;
 ```
-### 8. **Contar cuántos empleados tienen su nombre más largo de 10 caracteres**
+### 9. **Contar cuántos empleados tienen su nombre más largo de 10 caracteres**
 ---
 Enunciado: Necesitamos contar cuántos empleados tienen un nombre con más de 10
 caracteres.
@@ -274,7 +268,7 @@ caracteres.
 SELECT COUNT(nombre) AS empleados_con_nombre_de_10_caract
 FROM empleados WHERE LENGTH(nombre) > 10;
 ```
-### 9. **Filtrar empleados que ingresaron hace más de 5 años**
+### 10. **Filtrar empleados que ingresaron hace más de 5 años**
 --- 
 Enunciado: Queremos obtener una lista de empleados que hayan ingresado hace más de 5
 años.
