@@ -30,3 +30,9 @@ SELECT customer_id FROM rental WHERE DATEDIFF(NOW(),rental_date) > 30;
 -- Seleccionar el nombre y apellido de estos
 SELECT first_name, last_name FROM customer WHERE customer_id IN (SELECT customer_id FROM rental WHERE DATEDIFF(NOW(),rental_date) > 30);
 ```
+4. *Muestra los nombres de los actores y los titulos 
+de las peliculas en las que han participado*
+- - 
+```sql
+SELECT actor.first_name, actor.last_name, film.title FROM actor RIGHT JOIN (film_actor INNER JOIN film) ON actor.actor_id = film_actor.actor_id;
+```
