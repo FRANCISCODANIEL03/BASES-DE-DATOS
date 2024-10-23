@@ -22,3 +22,11 @@ SELECT actor_id FROM film_actor WHERE film_id IN (SELECT film_id FROM film_categ
 -- Finalmente se extrae el nombre y apellido de los actores
 SELECT first_name, last_name FROM actor WHERE actor_id IN (SELECT actor_id FROM film_actor WHERE film_id IN (SELECT film_id FROM film_category WHERE category_id = (SELECT category_id FROM category WHERE name = "Comedy")));
 ```
+3. *Encuentra a los clientes que no han realizado ningun alquiler en los ultimos 30 dias*
+- - 
+```sql
+-- Seleccionar los id de los clientes que no hayan realizado un alquiler en losultimos 30 dias 
+SELECT customer_id FROM rental WHERE DATEDIFF(NOW(),rental_date) > 30;
+-- Seleccionar el nombre y apellido de estos
+SELECT first_name, last_name FROM customer WHERE customer_id IN (SELECT customer_id FROM rental WHERE DATEDIFF(NOW(),rental_date) > 30);
+```
