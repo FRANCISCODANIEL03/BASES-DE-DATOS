@@ -64,3 +64,11 @@ SELECT first_name FROM actor
 UNION 
 SELECT first_name FROM customer;
 ```
+7. *Encuentra las peliculas que no han sido alquiladas*
+```sql
+SELECT title FROM film
+EXCEPT
+SELECT film.title FROM film 
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id;
+```
