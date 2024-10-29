@@ -72,3 +72,8 @@ SELECT film.title FROM film
 JOIN inventory ON film.film_id = inventory.film_id
 JOIN rental ON inventory.inventory_id = rental.inventory_id;
 ```
+8. *Devuelve las ciudades donde viven los cilentes o empleados sin duplicados*
+```sql
+SELECT CONCAT(c.first_name," ", c.last_name) AS full_name, city FROM customer AS c JOIN 
+(SELECT address_id, city FROM city JOIN address ON city.city_id = address.city_id) AS t ON c.address_id = t.address_id;
+```
