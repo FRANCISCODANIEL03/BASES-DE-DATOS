@@ -51,3 +51,16 @@ FROM actor AS a
 JOIN film_actor AS fa ON a.actor_id = fa.actor_id
 JOIN film AS f ON fa.film_id = f.film_id;
 ```
+## Otras opciones
+
+* UNION --> Si existen datos repetidos los elimina 
+* UNION ALL --> Da los datos completos
+* INTERSECT --> Encuentra los datos en comun entre ambas tablas
+* EXCEPT --> Elimina los datos que se intersecten
+
+**Ejemplo:**
+```sql
+SELECT first_name FROM actor
+UNION 
+SELECT first_name FROM customer;
+```
