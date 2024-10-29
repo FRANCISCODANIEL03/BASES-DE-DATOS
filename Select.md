@@ -44,3 +44,10 @@ film.film_id = inventory.film_id
 LEFT JOIN rental ON inventory.inventory_id = rental.inventory_id
 GROUP BY film.title;
 ```
+6. *Muestra los nombres de los actores y los titulos de las peliculas en las que han participado* 
+```sql
+SELECT CONCAT(a.first_name," ", a.last_name) AS full_name, f.title AS participo_en 
+FROM actor AS a
+JOIN film_actor AS fa ON a.actor_id = fa.actor_id
+JOIN film AS f ON fa.film_id = f.film_id;
+```
