@@ -36,3 +36,11 @@ de las peliculas en las que han participado*
 ```sql
 SELECT actor.first_name, actor.last_name, film.title FROM actor RIGHT JOIN (film_actor INNER JOIN film) ON actor.actor_id = film_actor.actor_id;
 ```
+5. *Muestra las veces que se ha rentado una pelicula*
+- - 
+```sql
+SELECT film.title, COUNT(rental.rental_id) AS rental_count FROM film LEFT JOIN inventory ON 
+film.film_id = inventory.film_id
+LEFT JOIN rental ON inventory.inventory_id = rental.inventory_id
+GROUP BY film.title;
+```
