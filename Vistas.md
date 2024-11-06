@@ -15,3 +15,19 @@ FROM admin
 INNER JOIN store ON store.id_admin = admin.id_admin
 INNER JOIN user ON store.id_store = user.id_store;
 ```
+
+2. *Crea una vista que muestre las `transacciones` realizadas para las `tarjetas`, incluye el id del `cliente`, el nombre de la `tienda`, la fecha de la `transaccion`, la cantidad de `puntos` obtenidos y el nombre de la `transaccion`*
+- -
+```sql
+CREATE VIEW transacciones_tarjetas AS
+SELECT 
+    client.id_client,
+    store.name AS store_name,
+    transaction.date AS fecha_transaccion,
+    transaction.points AS puntos_obtenidos,
+    transaction.amount AS monto_transaccion
+FROM transaction
+JOIN card_points ON transaction.id_card = card_points.id_card
+JOIN client ON card_points.id_client = client.id_client
+JOIN store ON card_points.id_store = store.id_store;
+```
