@@ -5,7 +5,7 @@
 ### ~ Ejercicios 
 [DATOS UTILIZADOS](tienda.sql)
 - - - 
-1. *Crear una vista que muestre los detalles de los administradores y las tiendas que administran, incluyendo el nombre de los usuarios, nombre de la tienda y estado en el que se encuentran*
+1. *Crear una vista que muestre los detalles de los `administradores` y las tiendas que administran, incluyendo el nombre de los `usuarios`, nombre de la `tienda` y `estado` en el que se encuentran*
 - -
 ```sql
 CREATE VIEW detalles_admin AS
