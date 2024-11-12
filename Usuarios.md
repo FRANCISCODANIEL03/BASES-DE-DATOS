@@ -32,3 +32,19 @@ GRANT INSERT ON empresa_db.* TO  "empleado"@"localhost";
 
 FLUSH PRIVILEGES;
 ```
+
+3. ### Ejercicio 3: Asignar Privilegios Globales
+ 
+*Enunciado:*
+* Crea un usuario llamado admin_db con la contraseña admin123 .
+* Asigna al usuario admin_db privilegios globales para crear y eliminar bases de datos ( `CREATE` y `DROP` ), así como para gestionar usuarios ( `CREATE USER` y `DROP USER` ).
+```sql
+CREATE USER "admin_db"@"localhost" IDENTIFIED BY "admin123";
+
+GRANT CREATE, DROP ON *.* TO  "admin_db"@"localhost";
+
+
+GRANT CREATE USER ON *.* TO  "admin_db"@"localhost";
+
+FLUSH PRIVILEGES;
+```
