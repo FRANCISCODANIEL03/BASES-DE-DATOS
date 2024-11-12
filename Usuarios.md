@@ -19,3 +19,16 @@ REVOKE UPDATE, DELETE ON empresa_db.* FROM "empleado"@"localhost";
 
 FLUSH PRIVILEGES;
 ```
+
+2. ### Ejercicio 2: Revocar Privilegios y Modificar Permisos
+ 
+*Enunciado:*
+* El usuario empleado anteriormente tenía permisos de solo lectura sobre la base de datos empresa_db .
+* Ahora, revoca el privilegio `SELECT` al usuario empleado y asigna el privilegio `INSERT` para que pueda agregar datos a las tablas de empresa_db .
+```sql
+REVOKE SELECT ON empresa_db.* FROM "empleado"@"localhost";
+
+GRANT INSERT ON empresa_db.* TO  "empleado"@"localhost";
+
+FLUSH PRIVILEGES;
+```
