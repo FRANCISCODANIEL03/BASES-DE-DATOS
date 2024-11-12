@@ -48,3 +48,12 @@ GRANT CREATE USER ON *.* TO  "admin_db"@"localhost";
 
 FLUSH PRIVILEGES;
 ```
+
+4. ### Ejercicio 4: Ver Privilegios de un Usuario
+ 
+*Enunciado:*
+* El usuario admin_db tiene privilegios para crear y eliminar bases de datos.
+* Usando el comando adecuado, verifica los privilegios asignados al usuario admin_db en el servidor MySQL.
+```sql
+SHOW GRANTS FOR "admin_db"@"localhost";
+```
