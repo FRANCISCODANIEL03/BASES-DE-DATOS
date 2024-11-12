@@ -57,3 +57,4 @@ FLUSH PRIVILEGES;
 ```sql
 SHOW GRANTS FOR "admin_db"@"localhost";
 ```
+![image.png](/imgs/grants_admin.png)
