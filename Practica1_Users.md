@@ -15,3 +15,11 @@ desde cualquier dirección IP ( `%` ).
 CREATE USER 'usuario_remoto'@'%' IDENTIFIED BY 'remote123';
 ```
 * *
+## Ejercicio 3: Usuario con restricciones de contraseña
+Crea un usuario llamado `usuario_seguro` con la contraseña `seguro123` que expire en 90 días y
+permita máximo 5 intentos fallidos de inicio de sesión.
+```sql
+CREATE USER 'usuario_seguro'@'%' IDENTIFIED BY 'seguro123'
+PASSWORD EXPIRE INTERVAL 90 DAY FAILED_LOGIN_ATTEMPTS 5;
+```
+* *
