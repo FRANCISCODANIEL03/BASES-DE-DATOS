@@ -34,3 +34,9 @@ CREATE USER 'lector'@'192.168.0.100' IDENTIFIED BY 'lector123';
 CREATE USER 'editor'@'%' IDENTIFIED BY 'editor123';
 ```
 * *
+## Ejercicio 5: Verificación de usuarios creados
+Consulta la lista de usuarios existentes en MySQL.
+```sql
+SELECT User, Host FROM mysql.user;
+```
+![users.png](/imgs/P1_users.png)
