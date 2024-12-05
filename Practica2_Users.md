@@ -8,3 +8,10 @@ desde cualquier dirección IP.
 GRANT SELECT ON biblioteca.* TO 'lector'@'%';
 ```
 * *
+## Ejercicio 2: Otorgar permisos de escritura
+Otorga permisos para insertar y actualizar ( `INSERT` , `UPDATE` ) datos en la tabla `libros`al
+usuario `editor`.
+```sql
+GRANT INSERT, UPDATE ON biblioteca.libros TO 'editor'@'%';
+```
+* *
