@@ -15,3 +15,9 @@ usuario `editor`.
 GRANT INSERT, UPDATE ON biblioteca.libros TO 'editor'@'%';
 ```
 * *
+## Ejercicio 3: Revocar permisos específicos
+Revoca el permiso de actualización ( `UPDATE` ) al usuario `editor`.
+```sql
+REVOKE UPDATE ON biblioteca.libros FROM 'editor'@'%';
+```
+* *
