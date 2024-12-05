@@ -8,3 +8,10 @@ tener acceso limitado para conectarse solo desde `localhost`.
 CREATE USER 'biblioteca_usuario'@'localhost' IDENTIFIED BY 'password123';
 ```
 * *
+## Ejercicio 2: Crear un usuario para acceso remoto
+Crea un usuario llamado `usuario_remoto` con la contraseña `remote123` que pueda conectarse
+desde cualquier dirección IP ( `%` ).
+```sql
+CREATE USER 'usuario_remoto'@'%' IDENTIFIED BY 'remote123';
+```
+* *
