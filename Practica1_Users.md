@@ -23,3 +23,14 @@ CREATE USER 'usuario_seguro'@'%' IDENTIFIED BY 'seguro123'
 PASSWORD EXPIRE INTERVAL 90 DAY FAILED_LOGIN_ATTEMPTS 5;
 ```
 * *
+## Ejercicio 4: Crear varios usuarios a la vez
+Crea tres usuarios:
+* 1.- `admin_biblioteca` con acceso total desde localhost.
+* 2.- `lector` con acceso limitado desde `192.168.0.100`.
+* 3.- `editor` con acceso desde cualquier IP.
+```sql
+CREATE USER 'admin_biblioteca'@'localhost' IDENTIFIED BY 'admin123';
+CREATE USER 'lector'@'192.168.0.100' IDENTIFIED BY 'lector123';
+CREATE USER 'editor'@'%' IDENTIFIED BY 'editor123';
+```
+* *
