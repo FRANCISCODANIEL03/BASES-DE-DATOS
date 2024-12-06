@@ -12,3 +12,10 @@ GRANT SELECT ON biblioteca.* TO 'rol_lector';
 GRANT INSERT, UPDATE, DELETE ON biblioteca.libros TO 'rol_editor';
 ```
 * *
+## Ejercicio 2: Asignar roles a usuarios
+Asigna el rol `rol_lector` al usuario `lector` y el rol `rol_editor` al usuario `editor`.
+```sql
+GRANT 'rol_lector' TO 'lector'@'%';
+GRANT 'rol_editor' TO 'editor'@'%';
+```
+* *
