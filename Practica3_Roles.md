@@ -39,3 +39,11 @@ SELECT * FROM information_schema.applicable_roles;
 ```
 ![image.png](/imgs/P3_roles.png)
 * *
+## Ejercicio 6: Crear un rol combinado
+Crea un rol llamado `rol_administrador` que combine los permisos de `rol_lector` y
+`rol_editor`. Luego, asígnalo al usuario `admin_biblioteca`.
+```sql
+CREATE ROLE 'rol_administrador';
+GRANT 'rol_lector', 'rol_editor' TO 'rol_administrador';
+GRANT 'rol_administrador' TO 'admin_biblioteca'@'localhost';
+```
