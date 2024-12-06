@@ -19,3 +19,9 @@ GRANT 'rol_lector' TO 'lector'@'%';
 GRANT 'rol_editor' TO 'editor'@'%';
 ```
 * *
+## Ejercicio 3: Revocar un rol
+El usuario `editor` ya no debe tener permisos de edición. Revoca el rol asignado.
+```sql
+REVOKE 'rol_editor' FROM 'editor'@'%';
+```
+* *
