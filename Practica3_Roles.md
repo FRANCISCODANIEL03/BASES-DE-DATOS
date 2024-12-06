@@ -32,3 +32,10 @@ Los usuarios no pueden usar un rol asignado hasta que lo activen explícitamente
 SET ROLE 'rol_lector';
 ```
 * *
+## Ejercicio 5: Ver roles asignados
+Consulta los roles asignados a los usuarios para verificar configuraciones.
+```sql
+SELECT * FROM information_schema.applicable_roles;
+```
+![image.png](/imgs/P3_roles.png)
+* *
