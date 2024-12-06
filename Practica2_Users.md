@@ -21,3 +21,12 @@ Revoca el permiso de actualización ( `UPDATE` ) al usuario `editor`.
 REVOKE UPDATE ON biblioteca.libros FROM 'editor'@'%';
 ```
 * *
+## Ejercicio 4: Modificar permisos existentes
+El usuario `lector` necesita permisos adicionales para consultar y exportar datos. Otórgale
+también permisos de lectura en `SHOW DATABASES`.
+```sql
+GRANT SELECT, SHOW DATABASES ON *.* TO 'lector'@'%';
+```
+![users.png](/imgs/P3_roles.png)
+> Nota: Para poder ejecutar esta consulta se necesita iniciar sesion con el ususario indicado
+* *
