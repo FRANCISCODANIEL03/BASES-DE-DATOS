@@ -25,3 +25,10 @@ El usuario `editor` ya no debe tener permisos de edición. Revoca el rol asignad
 REVOKE 'rol_editor' FROM 'editor'@'%';
 ```
 * *
+## Ejercicio 4: Activar roles
+Los usuarios no pueden usar un rol asignado hasta que lo activen explícitamente. Activa el rol
+`rol_lector` para el usuario `lector` en su sesión actual.
+```sql
+SET ROLE 'rol_lector';
+```
+* *
