@@ -30,3 +30,9 @@ GRANT SELECT, SHOW DATABASES ON *.* TO 'lector'@'%';
 ![users.png](/imgs/P3_roles.png)
 > Nota: Para poder ejecutar esta consulta se necesita iniciar sesion con el ususario indicado
 * *
+## Ejercicio 5: Eliminar usuarios
+Elimina al usuario `usuario_remoto` y asegúrate de que ya no aparezca en la lista de usuarios.
+```sql
+DROP USER 'usuario_remoto'@'%';
+SELECT User, Host FROM mysql.user;
+```
